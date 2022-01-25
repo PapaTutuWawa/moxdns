@@ -18,25 +18,27 @@ class Moxdns {
   static Future<List<SrvRecord>> srvQuery(String domain, bool dnssec) async {
     try {
       final List<dynamic> results = await _channel.invokeMethod("srvQuery", [ domain, dnssec ]);
+
+      final records = List<SrvRecord>.empty(growable: true);
+      for (var record in results) {
+        if (record == null) {
+          continue;
+        }
+
+        final rr = Map<String, String>.from(record);
+        records.add(SrvRecord(
+            target: rr["target"]!,
+            port: int.parse(rr["port"]!),
+            priority: int.parse(rr["priority"]!),
+            weight: int.parse(rr["weight"]!)
+        ));
+      }
+
+      return records;
     } on PlatformException catch(e) {
       return const [];
     }
 
-    final records = List<SrvRecord>.empty(growable: true);
-    for (var record in results) {
-      if (record == null) {
-        continue;
-      }
-
-      final rr = Map<String, String>.from(record);
-      records.add(SrvRecord(
-          target: rr["target"]!,
-          port: int.parse(rr["port"]!),
-          priority: int.parse(rr["priority"]!),
-          weight: int.parse(rr["weight"]!)
-      ));
-    }
-
-    return records;
+    return const [];
   }
 }
