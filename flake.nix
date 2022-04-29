@@ -33,7 +33,28 @@
         flutterPackages.beta pinnedJDK android.platform-tools flutterPackages.dart-beta # Flutter
 	      gitlint jq # Code hygiene
 	      ripgrep # General utilities
+
+        # Flutter dependencies for linux desktop
+        atk
+        cairo
+        clang
+        cmake
+        epoxy
+        gdk-pixbuf
+        glib
+        gtk3
+        harfbuzz
+        ninja
+        pango
+        pcre
+        pkg-config
+        xorg.libX11
+        xorg.xorgproto
       ];
+
+      # Make Flutter build on desktop
+      CPATH = "${pkgs.xorg.libX11.dev}/include:${pkgs.xorg.xorgproto}/include";
+      LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [ atk cairo epoxy gdk-pixbuf glib gtk3 harfbuzz pango ];
 
       ANDROID_HOME = "${android.androidsdk}/libexec/android-sdk";
       JAVA_HOME = pinnedJDK;
