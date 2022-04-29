@@ -13,9 +13,17 @@ dependencies:
   plugin_platform_interface: 2.1.0
 
   moxdns:
-    path: ../moxdns
+    git:
+      src: https://codeberg.org/moxxy/moxdns.git
+      rev: 6984429656d20069bb45c8885449cc2e7be3b6b9
+      path: packages/moxdns
+    #path: ../moxdns
   moxdns_platform_interface:
-    path: ../moxdns_platform_interface
+    git:
+      src: https://codeberg.org/moxxy/moxdns.git
+      rev: 6984429656d20069bb45c8885449cc2e7be3b6b9
+      path: packages/moxdns_platform_interface
+    #path: ../moxdns_platform_interface
 
 dev_dependencies:
   flutter_test:
