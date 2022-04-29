@@ -24,6 +24,7 @@ dev_dependencies:
 
 flutter:
   plugin:
+    implements: moxdns
     platforms:
       android:
         package: me.polynom.moxdns_android
