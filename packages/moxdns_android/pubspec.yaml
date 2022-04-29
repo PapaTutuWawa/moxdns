@@ -15,13 +15,13 @@ dependencies:
   moxdns:
     git:
       url: https://codeberg.org/moxxy/moxdns.git
-      rev: 6984429656d20069bb45c8885449cc2e7be3b6b9
+      rev: e1aa2a4124d00ee9029c6949d4aa02b286bb0c4b
       path: packages/moxdns
     #path: ../moxdns
   moxdns_platform_interface:
     git:
       url: https://codeberg.org/moxxy/moxdns.git
-      rev: 6984429656d20069bb45c8885449cc2e7be3b6b9
+      rev: e1aa2a4124d00ee9029c6949d4aa02b286bb0c4b
       path: packages/moxdns_platform_interface
     #path: ../moxdns_platform_interface
 
