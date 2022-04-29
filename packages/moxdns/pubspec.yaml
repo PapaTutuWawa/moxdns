@@ -12,7 +12,9 @@ flutter:
     platforms:
       android:
         default_package: moxdns_android
-  
+      linux:
+        default_package: moxdns_linux
+ 
 dependencies:
   flutter:
     sdk: flutter
@@ -21,6 +23,8 @@ dependencies:
     path: ../moxdns_platform_interface
   moxdns_android:
     path: ../moxdns_android
+  moxdns_linux:
+    path: ../moxdns_linux
 
 
 dev_dependencies:

@@ -115,7 +115,14 @@ packages:
       path: "../../moxdns_android"
       relative: true
     source: path
-    version: "0.0.1"
+    version: "0.1.0"
+  moxdns_linux:
+    dependency: transitive
+    description:
+      path: "../../moxdns_linux"
+      relative: true
+    source: path
+    version: "0.1.0"
   moxdns_platform_interface:
     dependency: transitive
     description:

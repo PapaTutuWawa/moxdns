@@ -53,9 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   Future<void> _query() async {
-    final results = await MoxdnsPlugin.srvQuery("_xmpps-client._tcp.disroot.org", false);
+    final results = await MoxdnsPlugin.srvQuery("_xmpps-client._tcp.polynom.me", false);
     for (final r in results) {
-      print("- ${r.target}:${r.port}");
+      print("- Target: ${r.target}");
+      print("  Port: ${r.port}");
+      print("  Weight: ${r.weight}");
+      print("  Priority: ${r.priority}");
     }
   }
 
