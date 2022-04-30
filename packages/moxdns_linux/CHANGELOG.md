@@ -1,3 +1,7 @@
-## 0.0.1
+## 0.1.0
 
-* TODO: Describe initial release.
+* Initial release
+
+## 0.1.1
+
+* Switch to selfhosted pub repository
