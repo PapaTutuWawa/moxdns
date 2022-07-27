@@ -20,17 +20,18 @@ dependencies:
   flutter:
     sdk: flutter
 
-  moxdns_platform_interface:
-    hosted: https://pub.polynom.me
-    version: 0.1.1
   moxdns_android:
     hosted: https://pub.polynom.me
     version: 0.1.1
   moxdns_linux:
     hosted: https://pub.polynom.me
     version: 0.1.1
+  moxdns_platform_interface:
+    hosted: https://pub.polynom.me
+    version: 0.1.1
 
 dev_dependencies:
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  very_good_analysis: 2.4.0

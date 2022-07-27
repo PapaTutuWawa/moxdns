@@ -1,6 +1,6 @@
+// ignore_for_file: avoid_print
 import 'package:flutter/material.dart';
-
-import "package:moxdns/moxdns.dart";
+import 'package:moxdns/moxdns.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,8 +50,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
   Future<void> _query() async {
     final results = await MoxdnsPlugin.srvQuery("_xmpps-client._tcp.polynom.me", false);
     for (final r in results) {
@@ -100,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              '0',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
