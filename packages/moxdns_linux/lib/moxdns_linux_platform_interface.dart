@@ -1,6 +1,5 @@
+import 'package:moxdns_linux/moxdns_linux_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-
-import 'moxdns_linux_method_channel.dart';
 
 abstract class MoxdnsLinuxPlatform extends PlatformInterface {
   /// Constructs a MoxdnsLinuxPlatform.
