@@ -1,6 +1,5 @@
+import 'package:moxdns_android/moxdns_android_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-
-import 'moxdns_android_method_channel.dart';
 
 abstract class MoxdnsAndroidPlatform extends PlatformInterface {
   /// Constructs a MoxdnsAndroidPlatform.

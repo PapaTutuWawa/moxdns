@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-
-import 'moxdns_android_platform_interface.dart';
+import 'package:moxdns_android/moxdns_android_platform_interface.dart';
 
 /// An implementation of [MoxdnsAndroidPlatform] that uses method channels.
 class MethodChannelMoxdnsAndroid extends MoxdnsAndroidPlatform {
