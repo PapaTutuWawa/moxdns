@@ -51,7 +51,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   Future<void> _query() async {
+    print("Performing query...");
     final results = await MoxdnsPlugin.srvQuery("_xmpps-client._tcp.polynom.me", false);
+    print("Done");
     for (final r in results) {
       print("- Target: ${r.target}");
       print("  Port: ${r.port}");
