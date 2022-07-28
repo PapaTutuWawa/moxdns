@@ -56,9 +56,9 @@ public class MoxdnsAndroidPlugin implements FlutterPlugin, MethodCallHandler {
               }});
             }
             result.success(tmp);
-          } catch (IOException ex) {
+          } catch (Exception ex) {
             ex.printStackTrace();
-            result.error("1", ex.getMessage(), ex.getStackTrace());
+            result.success(new ArrayList());
           }
         }
       });
