@@ -24,7 +24,8 @@ class MoxdnsAndroidPlugin extends MoxdnsPlatform {
         if (record == null) {
           continue;
         }
-        final rr = Map<String, String>.from(record as Map<String, String>);
+        // ignore: argument_type_not_assignable
+        final rr = Map<String, String>.from(record);
         records.add(
           SrvRecord(
             rr['target']!,
