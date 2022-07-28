@@ -105,31 +105,31 @@ packages:
   moxdns:
     dependency: "direct main"
     description:
-      path: ".."
+      path: "../packages/moxdns"
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.1.1"
   moxdns_android:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      path: "../../moxdns_android"
+      path: "../packages/moxdns_android"
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.1.1"
   moxdns_linux:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      path: "../../moxdns_linux"
+      path: "../packages/moxdns_linux"
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.1.1"
   moxdns_platform_interface:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      path: "../../moxdns_platform_interface"
+      path: "../packages/moxdns_platform_interface"
       relative: true
     source: path
-    version: "0.1.0"
+    version: "0.1.1"
   path:
     dependency: transitive
     description:
@@ -200,4 +200,3 @@ packages:
     version: "2.1.2"
 sdks:
   dart: ">=2.17.0-266.1.beta <3.0.0"
-  flutter: ">=2.5.0"
