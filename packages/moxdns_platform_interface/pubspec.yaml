@@ -2,7 +2,7 @@ name: moxdns_platform_interface
 description: Platform definitions for moxdns
 homepage: https://codeberg.org/moxxy/moxdns
 version: 0.1.2
-publish_to: https://pub.polynom.me
+publish_to: https://git.polynom.me/api/packages/Moxxy/pub
 
 environment:
   sdk: ">=2.17.0-266.1.beta <3.0.0"

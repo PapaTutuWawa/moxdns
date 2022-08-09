@@ -2,7 +2,7 @@ name: moxdns_android
 description: Android-specific implementation of moxdns
 version: 0.1.2
 homepage: https://codeberg.org/moxxy/moxdns
-publish_to: https://pub.polynom.me
+publish_to: https://git.polynom.me/api/packages/Moxxy/pub
 
 environment:
   sdk: ">=2.17.0-266.1.beta <3.0.0"
@@ -13,10 +13,10 @@ dependencies:
     sdk: flutter
 
   moxdns:
-    hosted: https://pub.polynom.me
+    hosted: https://git.polynom.me/api/packages/Moxxy/pub
     version: 0.1.2
   moxdns_platform_interface:
-    hosted: https://pub.polynom.me
+    hosted: https://git.polynom.me/api/packages/Moxxy/pub
     version: 0.1.2
 
   plugin_platform_interface: 2.1.0
