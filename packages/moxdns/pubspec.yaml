@@ -1,6 +1,6 @@
 name: moxdns
 description: A simple wrapper over platform native DNS methods
-version: 0.1.2
+version: 0.1.4
 homepage: https://codeberg.org/moxxy/moxdns
 publish_to: https://git.polynom.me/api/packages/Moxxy/pub
 
@@ -22,13 +22,13 @@ dependencies:
 
   moxdns_android:
     hosted: https://git.polynom.me/api/packages/Moxxy/pub
-    version: 0.1.2
+    version: 0.1.4
   moxdns_linux:
     hosted: https://git.polynom.me/api/packages/Moxxy/pub
-    version: 0.1.2
+    version: 0.1.4
   moxdns_platform_interface:
     hosted: https://git.polynom.me/api/packages/Moxxy/pub
-    version: 0.1.2
+    version: 0.1.4
 
 dev_dependencies:
   flutter_lints: ^2.0.0
