@@ -27,10 +27,10 @@ class MoxdnsLinuxPlugin extends MoxdnsPlatform {
           continue;
         }
         // ignore: argument_type_not_assignable
-        final rr = Map<String, String>.from(record);
+        final rr = Map<String, dynamic>.from(record);
         records.add(
           SrvRecord(
-            rr['target']!,
+            rr['target']! as String,
             rr['port']! as int,
             rr['priority']! as int,
             rr['weight']! as int,

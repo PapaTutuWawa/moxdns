@@ -1,7 +1,7 @@
 {
   description = "moxlib";
   inputs = {
-    nixpkgs.url = "github:PapaTutuWawa/nixpkgs/nixos-unstable-flutter-2.13.0-0.1.pre";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -26,11 +26,11 @@
       useGoogleAPIs = false;
       useGoogleTVAddOns = false;
     };
-    pinnedJDK = pkgs.jdk11;
+    pinnedJDK = pkgs.jdk;
   in {
     devShell = pkgs.mkShell {
       buildInputs = with pkgs; [
-        flutterPackages.beta pinnedJDK android.platform-tools flutterPackages.dart-beta # Flutter
+        flutter pinnedJDK android.platform-tools dart # Flutter
 	      gitlint jq # Code hygiene
 	      ripgrep # General utilities
 
@@ -56,7 +56,7 @@
       CPATH = "${pkgs.xorg.libX11.dev}/include:${pkgs.xorg.xorgproto}/include";
       LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [ atk cairo epoxy gdk-pixbuf glib gtk3 harfbuzz pango ];
 
-      ANDROID_HOME = "${android.androidsdk}/libexec/android-sdk";
+      ANDROID_HOME = (toString ./.) + "/.android/sdk";
       JAVA_HOME = pinnedJDK;
       ANDROID_AVD_HOME = (toString ./.) + "/.android/avd";
     };
