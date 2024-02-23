@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import org.minidns.hla.DnssecResolverApi;
 import org.minidns.hla.ResolutionUnsuccessfulException;
+import org.minidns.hla.ResolverApi;
 import org.minidns.hla.ResolverResult;
 import org.minidns.record.SRV;
 
@@ -43,8 +44,10 @@ public class MoxdnsAndroidPlugin implements FlutterPlugin, MethodCallHandler {
         @Override
         public void run() {
           try {
-            ResolverResult<SRV> dns_result = DnssecResolverApi.INSTANCE.resolve(domain, SRV.class);
-            // TODO: DNSSEC
+            ResolverResult<SRV> dns_result = dnssec ?
+                    DnssecResolverApi.INSTANCE.resolve(domain, SRV.class) :
+                    ResolverApi.INSTANCE.resolve(domain, SRV.class);
+            
             Set<SRV> records = dns_result.getAnswersOrEmptySet();
             ArrayList tmp = new ArrayList();
             for (SRV srv : records) {
